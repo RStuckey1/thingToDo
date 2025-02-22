@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import EditToDos from "./EditToDos";
+import EditToDo from "./EditToDo";
 
 const ListToDos = () => {
 
@@ -55,7 +55,7 @@ const ListToDos = () => {
             <tr key={todo.todo_id}>
                 <td>{todo.description}</td>
                 <td>
-                    <button><EditToDos/></button>
+                    <EditToDo todo={todo} />
                 </td>
                 <td>
                     <button className="btn btn-danger" onClick={() => deleteTodo(todo.todo_id)}>Delete</button>
